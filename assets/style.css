@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+
+  background-color: #ffead4;
+}
+
+.container-header {
+  width: 100vw;
+}
+
+.container-titulo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 10%;
+  width: 80%;
+
+  fill: transparent;
+  /*forwards -> ele faz com que a animação pare quando chegar no ponto final*/
+  animation: titulo-verao 0.5s ease-in-out forwards 3s;
+}
+
+.container-header path {
+  stroke: #be253f;
+  stroke-width: 2px;
+  stroke-dasharray: 3000; /*deixa a linha tracejado*/
+  stroke-dashoffset: 3000; /* esse vai ajuda na animação da linha determinando os espaços da linha fazendo com que elas parece esta em movimento */
+
+  animation: linha-tracado 0.5s ease-in-out forwards 1s;
+}
+
+@keyframes titulo-verao {
+  to {
+    fill: #be253f;
+  }
+}
+
+@keyframes linha-tracado {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

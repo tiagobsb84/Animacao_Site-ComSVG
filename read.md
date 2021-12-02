@@ -1,0 +1,10 @@
+M = move até
+L = linha até
+H = linha horizontal até
+V = linha vertical até
+C = curva até
+S = curva suave até
+Q = curva de Bézier
+T = curva de Bézier suave
+A = arco elíptico
+Z = fecha path
