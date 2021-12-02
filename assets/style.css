@@ -1,42 +1,77 @@
 body {
   margin: 0;
-  overflow-x: hidden;
-
   background-color: #ffead4;
+  overflow-x: hidden;
 }
 
 .container-header {
   width: 100vw;
 }
 
-.container-titulo {
+.lett-header {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  margin-top: 10%;
   width: 80%;
-
+  margin-top: 10%;
   fill: transparent;
-  /*forwards -> ele faz com que a animação pare quando chegar no ponto final*/
-  animation: titulo-verao 0.5s ease-in-out forwards 3s;
+  animation: lett-preenchimento 0.5s ease-in-out forwards 4s;
 }
 
-.container-header path {
-  stroke: #be253f;
+.lett-header path {
   stroke-width: 2px;
-  stroke-dasharray: 3000; /*deixa a linha tracejado*/
-  stroke-dashoffset: 3000; /* esse vai ajuda na animação da linha determinando os espaços da linha fazendo com que elas parece esta em movimento */
-
-  animation: linha-tracado 0.5s ease-in-out forwards 1s;
+  stroke: #be253f;
+  stroke-dasharray: 3000;
+  stroke-dashoffset: 3000;
+  animation: lett-tracado 5s ease-in-out forwards 1s;
 }
 
-@keyframes titulo-verao {
+h1,
+h2 {
+  font-family: "Pacifico", cursive;
+  color: #be253f;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  color: #484848;
+  font-size: 1em;
+}
+
+.container-cards {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+  padding: 20px;
+  margin: 20px;
+}
+
+.div-teste {
+  height: 500px;
+}
+
+@keyframes lett-preenchimento {
   to {
     fill: #be253f;
   }
 }
 
-@keyframes linha-tracado {
+@keyframes lett-tracado {
   to {
     stroke-dashoffset: 0;
   }
