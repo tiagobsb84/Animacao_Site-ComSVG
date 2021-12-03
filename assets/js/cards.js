@@ -14,7 +14,6 @@ class Cards {
         //getBoundingClienteReact -> usar para achar a posicao que está o scroll no eixo y.
         const posicao = this.posicaoSectionDicas.getBoundingClientRect()['y'];
 
-        console.log(posicao);
         if (posicao >= 25) {
             this.cardEsq.style.transform = `translate(${((-posicao) + 25) / 10}%)`;
 
